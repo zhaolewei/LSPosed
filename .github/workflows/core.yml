@@ -138,6 +138,7 @@ jobs:
           name: symbols
           path: build/symbols
 
+
       - name: Post to channel
         if: ${{ success() && github.event_name != 'pull_request' && github.ref == 'refs/heads/master' && github.ref_type != 'tag' && inputs.post_telegram != 'false' }}
         env:
